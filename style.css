@@ -1,0 +1,211 @@
+/* ============================================
+   GENERAL STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   ============================================ */
+header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    text-align: center;
+    border-bottom: 2px solid #e94560;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #e94560;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 0 10px;
+    border-radius: 25px;
+    background: rgba(233, 69, 96, 0.2);
+    border: 1px solid #e94560;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #e94560;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+/* ============================================
+   SLIDE / PRESENTATION STYLE
+   ============================================ */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.slide {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide h2 {
+    font-size: 2rem;
+    color: #e94560;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+}
+
+/* ============================================
+   CERTIFICATE SLIDE
+   ============================================ */
+.certificate-slide {
+    text-align: center;
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.certificate-container img {
+    max-width: 100%;
+    width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(233, 69, 96, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 60px rgba(233, 69, 96, 0.3);
+}
+
+.caption {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-top: 20px;
+}
+
+/* ============================================
+   NOTES SLIDE
+   ============================================ */
+.notes-slide {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.notes-content {
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+}
+
+.notes-content p {
+    margin-bottom: 20px;
+    text-indent: 30px;
+    color: #ccc;
+}
+
+/* ============================================
+   REFLECTION SLIDE
+   ============================================ */
+.reflection-slide {
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.2) 100%);
+    text-align: center;
+}
+
+.reflection-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reflection-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+    font-style: italic;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #888;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .slide {
+        padding: 25px;
+    }
+    
+    .slide h2 {
+        font-size: 1.5rem;
+    }
+    
+    .notes-content {
+        column-count: 1;
+    }
+    
+    .certificate-container img {
+        width: 100%;
+    }
+}
